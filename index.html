@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TR Lab</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      display: none;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn {
+      padding: 12px 25px;
+      margin: 15px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      background: #00c6ff;
+      background: linear-gradient(to right, #0072ff, #00c6ff);
+      color: white;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    }
+
+    .image-section {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .image-section img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <button class="btn" onclick="showWelcome()">Join</button>
+
+  <h1 id="welcomeText">Welcome to TR Lab</h1>
+
+  <button class="btn" onclick="showImage()">More Information</button>
+
+  <div class="image-section" id="imageSection">
+    <img src="/storage/emulated/0/Pictures/Canva/Orange Black and White Corporate Graphic Designer Resume A4_20250802_024825_0000.png" alt="TR Lab Info" />
+  </div>
+
+  <script>
+    function showWelcome() {
+      document.getElementById("welcomeText").style.display = "block";
+    }
+
+    function showImage() {
+      document.getElementById("imageSection").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
